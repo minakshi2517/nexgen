@@ -52,23 +52,23 @@
           <label style="color:#e2e8f0; font-size:0.85rem; font-weight:600; display:block; margin-bottom:0.4rem;">
             <i class="fas fa-envelope" style="color:var(--gold-primary); margin-right:0.4rem;"></i> Admin Email Address
           </label>
-          <input type="email" id="auth-email" class="form-control" value="admin@nexgenc2cskills.com" placeholder="admin@nexgenc2cskills.com" required style="background:rgba(5,9,20,0.8); border:1px solid rgba(212,160,23,0.3); color:#fff; padding:0.8rem 1rem; border-radius:8px; width:100%;">
+          <input type="email" id="auth-email" class="form-control" placeholder="Enter authorized admin email" required style="background:rgba(5,9,20,0.8); border:1px solid rgba(212,160,23,0.3); color:#fff; padding:0.8rem 1rem; border-radius:8px; width:100%;">
         </div>
 
         <div class="form-group" style="margin-bottom:1.6rem;">
           <label style="color:#e2e8f0; font-size:0.85rem; font-weight:600; display:block; margin-bottom:0.4rem;">
             <i class="fas fa-key" style="color:var(--gold-primary); margin-right:0.4rem;"></i> Master Password
           </label>
-          <input type="password" id="auth-password" class="form-control" placeholder="Enter password (e.g. admin123)" required style="background:rgba(5,9,20,0.8); border:1px solid rgba(212,160,23,0.3); color:#fff; padding:0.8rem 1rem; border-radius:8px; width:100%;">
+          <input type="password" id="auth-password" class="form-control" placeholder="Enter master password" required style="background:rgba(5,9,20,0.8); border:1px solid rgba(212,160,23,0.3); color:#fff; padding:0.8rem 1rem; border-radius:8px; width:100%;">
         </div>
 
-        <button type="submit" class="btn btn-primary" style="width:100%; padding:0.85rem; font-weight:700; display:flex; justify-content:center; align-items:center; gap:0.5rem;">
-          <span>Authenticate & Send OTP</span> <i class="fas fa-arrow-right"></i>
+        <button type="submit" id="btn-step1-submit" class="btn btn-primary" style="width:100%; padding:0.85rem; font-weight:700; display:flex; justify-content:center; align-items:center; gap:0.5rem;">
+          <span>Authenticate & Send 2FA OTP</span> <i class="fas fa-arrow-right"></i>
         </button>
 
         <div style="margin-top:1.4rem; text-align:center;">
           <small style="color:rgba(255,255,255,0.45); font-size:0.75rem;">
-            <i class="fas fa-lock"></i> 2-Factor Authentication Required • Password: <strong>admin123</strong>
+            <i class="fas fa-shield-alt"></i> End-to-End Encrypted 2-Step Email Verification
           </small>
         </div>
       </form>

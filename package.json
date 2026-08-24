@@ -1,0 +1,15 @@
+{
+  "name": "nexgen-c2c-skills",
+  "version": "1.0.0",
+  "description": "NexGen C2C Skills - AI, Industrial & Corporate Training Platform",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "jsonwebtoken": "^9.0.2",
+    "nodemailer": "^6.9.13"
+  }
+}

@@ -2,39 +2,56 @@
  * NexGen C2C Skills - Admin CMS Portal Logic with 2-Step Email Verification
  */
 
-let currentGeneratedOtp = null;
-let currentPendingEmail = "admin@nexgenc2cskills.com";
+let currentPendingEmail = "";
 let resendTimerInterval = null;
 
 // Auth State Check on Page Load
-function checkAdminAuth() {
-  const isAuth = sessionStorage.getItem("nexgen_admin_auth") === "true";
+async function checkAdminAuth() {
+  const token = sessionStorage.getItem("nexgen_admin_token");
   const authOverlay = document.getElementById("admin-auth-overlay");
   const cmsWrapper = document.getElementById("admin-cms-wrapper");
   const userEmailDisplay = document.getElementById("admin-user-email");
 
-  if (isAuth) {
-    if (authOverlay) authOverlay.style.display = "none";
-    if (cmsWrapper) cmsWrapper.style.display = "block";
-    const savedEmail = sessionStorage.getItem("nexgen_admin_email") || "admin@nexgenc2cskills.com";
-    if (userEmailDisplay) userEmailDisplay.textContent = savedEmail;
-    return true;
-  } else {
+  if (!token) {
+    if (authOverlay) authOverlay.style.display = "flex";
+    if (cmsWrapper) cmsWrapper.style.display = "none";
+    return false;
+  }
+
+  try {
+    const res = await fetch("/api/auth/me", {
+      headers: { "Authorization": `Bearer ${token}` }
+    });
+    const data = await res.json();
+
+    if (data.authenticated) {
+      if (authOverlay) authOverlay.style.display = "none";
+      if (cmsWrapper) cmsWrapper.style.display = "block";
+      if (userEmailDisplay) userEmailDisplay.textContent = data.admin.email;
+      return true;
+    } else {
+      sessionStorage.removeItem("nexgen_admin_token");
+      sessionStorage.removeItem("nexgen_admin_email");
+      if (authOverlay) authOverlay.style.display = "flex";
+      if (cmsWrapper) cmsWrapper.style.display = "none";
+      return false;
+    }
+  } catch (err) {
+    // If backend is running offline or static fallback
     if (authOverlay) authOverlay.style.display = "flex";
     if (cmsWrapper) cmsWrapper.style.display = "none";
     return false;
   }
 }
 
-// Step 1: Credentials Submission
-window.handleStep1Submit = function(e) {
+// Step 1: Credentials Submission via Secure API
+window.handleStep1Submit = async function(e) {
   e.preventDefault();
   const emailInput = document.getElementById("auth-email").value.trim();
   const passInput = document.getElementById("auth-password").value.trim();
   const errorBox = document.getElementById("step1-error");
   const errorMsg = document.getElementById("step1-error-msg");
-
-  const validPasswords = ["admin123", "admin", "nexgen2026", "nexgen@2026"];
+  const submitBtn = document.getElementById("btn-step1-submit") || e.target.querySelector('button[type="submit"]');
 
   if (!emailInput || !emailInput.includes("@")) {
     errorBox.style.display = "block";
@@ -42,38 +59,66 @@ window.handleStep1Submit = function(e) {
     return;
   }
 
-  if (!validPasswords.includes(passInput)) {
+  if (!passInput) {
     errorBox.style.display = "block";
-    errorMsg.textContent = "Incorrect password. (Default master password is: admin123)";
+    errorMsg.textContent = "Please enter your master password.";
     return;
   }
 
   errorBox.style.display = "none";
-  currentPendingEmail = emailInput;
+  const originalBtnHtml = submitBtn.innerHTML;
+  submitBtn.disabled = true;
+  submitBtn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> <span>Verifying & Sending OTP...</span>`;
 
-  // Generate 6-digit OTP code
-  currentGeneratedOtp = Math.floor(100000 + Math.random() * 900000).toString();
+  try {
+    const res = await fetch("/api/auth/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email: emailInput, password: passInput })
+    });
 
-  // Transition to Step 2
-  document.getElementById("admin-login-step1").style.display = "none";
-  document.getElementById("admin-login-step2").style.display = "block";
-  document.getElementById("auth-display-email").textContent = currentPendingEmail;
+    const data = await res.json();
 
-  // Clear previous OTP inputs
-  document.querySelectorAll(".otp-digit").forEach(input => input.value = "");
-  const firstOtpInput = document.querySelector('.otp-digit[data-index="0"]');
-  if (firstOtpInput) setTimeout(() => firstOtpInput.focus(), 150);
+    if (!res.ok || !data.success) {
+      errorBox.style.display = "block";
+      errorMsg.textContent = data.message || "Invalid email or master password.";
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalBtnHtml;
+      return;
+    }
 
-  // Show Simulated Email Toast Notification
-  showEmailOtpToast(currentGeneratedOtp, currentPendingEmail);
+    currentPendingEmail = emailInput;
+
+    // Transition to Step 2
+    document.getElementById("admin-login-step1").style.display = "none";
+    document.getElementById("admin-login-step2").style.display = "block";
+    document.getElementById("auth-display-email").textContent = currentPendingEmail;
+
+    // Clear previous OTP inputs
+    document.querySelectorAll(".otp-digit").forEach(input => input.value = "");
+    const firstOtpInput = document.querySelector('.otp-digit[data-index="0"]');
+    if (firstOtpInput) setTimeout(() => firstOtpInput.focus(), 150);
+
+    // If devMode is active without SMTP set, show helper banner
+    if (data.devMode && data.devOtp) {
+      showEmailOtpToast(data.devOtp, currentPendingEmail);
+    }
+  } catch (err) {
+    errorBox.style.display = "block";
+    errorMsg.textContent = "Could not connect to authentication server. Please check your network or server setup.";
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = originalBtnHtml;
+  }
 };
 
-// Step 2: OTP Verification
-window.handleStep2Submit = function(e) {
+// Step 2: OTP Verification via Secure API
+window.handleStep2Submit = async function(e) {
   e.preventDefault();
   const digits = Array.from(document.querySelectorAll(".otp-digit")).map(i => i.value).join("");
   const errorBox = document.getElementById("step2-error");
   const errorMsg = document.getElementById("step2-error-msg");
+  const submitBtn = e.target.querySelector('button[type="submit"]');
 
   if (digits.length < 6) {
     errorBox.style.display = "block";
@@ -81,10 +126,30 @@ window.handleStep2Submit = function(e) {
     return;
   }
 
-  // Validate OTP (Matches generated OTP or master bypass 123456)
-  if (digits === currentGeneratedOtp || digits === "123456") {
-    errorBox.style.display = "none";
-    sessionStorage.setItem("nexgen_admin_auth", "true");
+  errorBox.style.display = "none";
+  const originalBtnHtml = submitBtn.innerHTML;
+  submitBtn.disabled = true;
+  submitBtn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> <span>Verifying OTP...</span>`;
+
+  try {
+    const res = await fetch("/api/auth/verify-otp", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email: currentPendingEmail, otp: digits })
+    });
+
+    const data = await res.json();
+
+    if (!res.ok || !data.success) {
+      errorBox.style.display = "block";
+      errorMsg.textContent = data.message || "Invalid or expired OTP code.";
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalBtnHtml;
+      return;
+    }
+
+    // Success! Save JWT Token
+    sessionStorage.setItem("nexgen_admin_token", data.token);
     sessionStorage.setItem("nexgen_admin_email", currentPendingEmail);
     
     // Hide Auth Gateway & Reveal Dashboard
@@ -105,19 +170,43 @@ window.handleStep2Submit = function(e) {
       loadTestimonialsList();
       loadLeadsTable();
     }
-  } else {
+  } catch (err) {
     errorBox.style.display = "block";
-    errorMsg.textContent = `Invalid OTP code. The code sent to ${currentPendingEmail} is: ${currentGeneratedOtp}`;
+    errorMsg.textContent = "Verification request failed. Please try again.";
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = originalBtnHtml;
   }
 };
 
-// Resend OTP Code
-window.resendOtpCode = function(e) {
+// Resend OTP Code via Secure API
+window.resendOtpCode = async function(e) {
   if (e) e.preventDefault();
-  currentGeneratedOtp = Math.floor(100000 + Math.random() * 900000).toString();
-  showEmailOtpToast(currentGeneratedOtp, currentPendingEmail);
+  const resendBtn = document.getElementById("resend-otp-btn");
   const errorBox = document.getElementById("step2-error");
   if (errorBox) errorBox.style.display = "none";
+
+  if (!currentPendingEmail) return;
+
+  if (resendBtn) resendBtn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Resending...`;
+
+  try {
+    const res = await fetch("/api/auth/resend-otp", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email: currentPendingEmail })
+    });
+    const data = await res.json();
+
+    if (data.success && data.devMode && data.devOtp) {
+      showEmailOtpToast(data.devOtp, currentPendingEmail);
+    }
+    alert(data.message || "New 2FA code sent!");
+  } catch (err) {
+    alert("Failed to resend OTP. Please try again.");
+  } finally {
+    if (resendBtn) resendBtn.innerHTML = `<i class="fas fa-redo-alt"></i> Resend Code`;
+  }
 };
 
 // Back to Step 1
@@ -131,15 +220,14 @@ window.backToStep1 = function(e) {
 // Admin Logout
 window.handleAdminLogout = function() {
   if (confirm("Are you sure you want to log out of the NexGen Admin CMS?")) {
-    sessionStorage.removeItem("nexgen_admin_auth");
+    sessionStorage.removeItem("nexgen_admin_token");
     sessionStorage.removeItem("nexgen_admin_email");
-    currentGeneratedOtp = null;
     checkAdminAuth();
     backToStep1();
   }
 };
 
-// Show Live Email Dispatch Toast
+// Show Toast Notification (For local development or when SMTP not set)
 function showEmailOtpToast(otp, email) {
   const toast = document.getElementById("auth-email-toast");
   const codeSpan = document.getElementById("toast-otp-code");
@@ -148,7 +236,7 @@ function showEmailOtpToast(otp, email) {
     toast.style.display = "block";
     setTimeout(() => {
       toast.style.display = "none";
-    }, 12000);
+    }, 15000);
   }
 }
 
