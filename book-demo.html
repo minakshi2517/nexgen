@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Free Demo Session | NexGen C2C Skills</title>
+  <meta name="description" content="Reserve your free live demonstration session for AI training, Campus to Corporate leadership workshops, or Industrial Automation labs.">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+</head>
+<body>
+  <canvas id="bg-canvas"></canvas>
+
+  <header class="header-nav">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/images/logo.png" alt="NexGen C2C Skills Official Logo" width="54" height="54">
+        <div class="brand-text">
+          <span class="brand-title">NexGen</span>
+          <span class="brand-subtitle">C2C Skills</span>
+        </div>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li class="nav-dropdown">
+          <a href="programs.html" class="nav-link"><span>Our Programs</span> <i class="fas fa-chevron-down" style="font-size:0.75rem;"></i></a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-item"><a href="programs.html"><i class="fas fa-th-large"></i> All Programs Overview</a></li>
+            <li class="dropdown-item"><a href="ai-training.html"><i class="fas fa-robot"></i> AI Training Programs</a></li>
+            <li class="dropdown-item"><a href="c2c-skills.html"><i class="fas fa-users-cog"></i> Campus to Corporate (C2C)</a></li>
+            <li class="dropdown-item"><a href="industrial-training.html"><i class="fas fa-cogs"></i> Industrial Oriented Training</a></li>
+          </ul>
+        </li>
+        <li><a href="events.html" class="nav-link">Upcoming Events</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="tel:+917078437914" class="btn btn-sm btn-outline"><i class="fas fa-phone-alt"></i> <span>7078437914</span></a>
+        <a href="book-demo.html" class="btn btn-sm btn-primary active"><span>Book Demo</span></a>
+        <button id="mobile-toggle" class="mobile-toggle"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="pill-badge gold"><i class="fas fa-calendar-check"></i> FREE TRIAL ACCESS</span>
+      <h1 class="page-hero-title">Book a Free <span class="gold-gradient-text">Live Demo Session</span></h1>
+      <p class="page-hero-desc">
+        Experience our interactive pedagogy, real-world case simulations, and toolkits before committing. Pick a date & time slot below.
+      </p>
+    </div>
+  </section>
+
+  <!-- Booking Form Box -->
+  <section style="padding: 5.5rem 0; background: var(--beige-cream);">
+    <div class="container">
+      <div style="max-width:760px; margin:0 auto; background:#FFFFFF; border:1px solid var(--beige-sand); border-top:4px solid var(--navy-deep); border-radius:var(--radius-md); padding:3.5rem; box-shadow:var(--shadow-luxury);" class="reveal">
+        <div style="text-align:center; margin-bottom:2.2rem;">
+          <h2 style="font-size:2rem; color:var(--navy-deep); font-family:var(--font-serif); margin-bottom:0.4rem;">Select Your Program & <span class="gold-text">Preferred Slot</span></h2>
+          <p style="color:var(--text-body-dark); font-size:0.95rem;">Live Zoom meeting access credentials will be delivered to your WhatsApp number.</p>
+        </div>
+
+        <form id="demo-booking-form" class="contact-form">
+          <div class="form-group">
+            <label for="d-name">Your Full Name *</label>
+            <input type="text" id="d-name" class="form-control" placeholder="e.g. Ananya Deshmukh" required>
+          </div>
+
+          <div style="display:grid; grid-template-columns: 1fr 1fr; gap:1rem;">
+            <div class="form-group">
+              <label for="d-phone">WhatsApp Number (For Meeting Link) *</label>
+              <input type="tel" id="d-phone" class="form-control" placeholder="e.g. 9876543210" required>
+            </div>
+            <div class="form-group">
+              <label for="d-email">Email Address *</label>
+              <input type="email" id="d-email" class="form-control" placeholder="ananya@example.com" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="d-program">Choose Training Track *</label>
+            <select id="d-program" class="form-control" required>
+              <option value="Artificial Intelligence (AI) - Live Demo">01 | Artificial Intelligence (Prompting & Tools)</option>
+              <option value="Campus to Corporate (C2C) - 7 Habits Masterclass">02 | Campus to Corporate (7 Habits & Leadership)</option>
+              <option value="Industrial Automation (PLC & SCADA Demo)">03 | Industrial Automation (PLC & SCADA)</option>
+              <option value="Operational Excellence (Lean & 8D Problem Solving)">04 | Operational Excellence (Lean Manufacturing & 8D)</option>
+              <option value="Industrial Robotics (Motion Control & Servo)">05 | Industrial Robotics & Motion Control</option>
+              <option value="Custom College / Corporate Workshop Consultation">06 | Custom Institutional / Corporate Workshop</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="d-slot">Select Preferred Date & Time Slot *</label>
+            <select id="d-slot" class="form-control" required>
+              <option value="Saturday 11:00 AM IST (Live Weekend Batch)">Upcoming Saturday | 11:00 AM IST</option>
+              <option value="Sunday 05:00 PM IST (Live Evening Batch)">Upcoming Sunday | 05:00 PM IST</option>
+              <option value="Wednesday 07:00 PM IST (Weekday Executive Slot)">Upcoming Wednesday | 07:00 PM IST</option>
+              <option value="Request 1-on-1 Personalized Time Slot">Request 1-on-1 Personalized Time Slot</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="d-notes">Any Specific Questions or Learning Focus? (Optional)</label>
+            <textarea id="d-notes" rows="3" class="form-control" placeholder="Tell us if you want to focus on placements, tool automation, or corporate upskilling..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg" style="width:100%; margin-top:0.8rem;">
+            <span>Confirm & Reserve Free Demo Seat</span> <i class="fas fa-calendar-check"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>© 2026 <strong>NexGen C2C Skills</strong>. All Rights Reserved. Building Future-Ready Talent.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="index.html">Home</a>
+          <a href="book-demo.html">Book Demo</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/store.js"></script>
+  <script src="assets/js/canvas-bg.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexGen C2C Skills | Campus to Corporate | Building Future-Ready Talent</title>
+  <meta name="description" content="NexGen C2C Skills empowers students, professionals, and faculty with AI-integrated learning, Campus to Corporate leadership programs, and industry-backed technical automation skills.">
+  <meta name="keywords" content="NexGen C2C Skills, Artificial Intelligence Training, Campus to Corporate, Lean Six Sigma, Industrial Automation PLC, Leadership Mindset, Atomic Habits Training">
+  <meta property="og:title" content="NexGen C2C Skills | Building Future-Ready Talent">
+  <meta property="og:description" content="AI Training, Campus to Corporate Solutions, and Industrial Automation practical learning.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/logo.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+</head>
+<body>
+
+  <!-- Ambient Luxury Canvas Background -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-announcement">
+    <span>🚀 <span class="highlight">New Batches Enrolling:</span> 20+ Practical AI Tools & Industry Certifications</span>
+    <a href="book-demo.html" class="btn btn-sm btn-primary" style="padding: 0.2rem 0.8rem; font-size: 0.75rem;">Book Free Demo</a>
+  </div>
+
+  <!-- LIVE EVENTS TICKER MARQUEE -->
+  <div class="events-ticker-bar">
+    <div class="ticker-label">
+      <i class="fas fa-bullhorn"></i> <span>LIVE EVENTS:</span>
+    </div>
+    <div class="ticker-track-wrapper">
+      <div id="dynamic-ticker-track" class="ticker-track">
+        <!-- Injected via Store JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="header-nav">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/images/logo.png" alt="NexGen C2C Skills Official Logo" width="52" height="52">
+        <div class="brand-text">
+          <span class="brand-title">NexGen</span>
+          <span class="brand-subtitle">C2C Skills</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        
+        <!-- Programs Dropdown -->
+        <li class="nav-dropdown">
+          <a href="programs.html" class="nav-link">
+            <span>Our Programs</span> <i class="fas fa-chevron-down" style="font-size:0.75rem;"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-item">
+              <a href="programs.html">
+                <i class="fas fa-th-large"></i>
+                <div>
+                  <strong>All Programs Overview</strong>
+                  <small style="display:block; color:var(--text-body-dark); font-size:0.75rem;">Master Catalog & Compare</small>
+                </div>
+              </a>
+            </li>
+            <li class="dropdown-item">
+              <a href="ai-training.html">
+                <i class="fas fa-robot"></i>
+                <div>
+                  <strong>AI Training Programs</strong>
+                  <small style="display:block; color:var(--text-body-dark); font-size:0.75rem;">Foundation, Mastery & Tools</small>
+                </div>
+              </a>
+            </li>
+            <li class="dropdown-item">
+              <a href="c2c-skills.html">
+                <i class="fas fa-users-cog"></i>
+                <div>
+                  <strong>Campus to Corporate (C2C)</strong>
+                  <small style="display:block; color:var(--text-body-dark); font-size:0.75rem;">7 Habits & Leadership Skills</small>
+                </div>
+              </a>
+            </li>
+            <li class="dropdown-item">
+              <a href="industrial-training.html">
+                <i class="fas fa-cogs"></i>
+                <div>
+                  <strong>Industrial Oriented Training</strong>
+                  <small style="display:block; color:var(--text-body-dark); font-size:0.75rem;">Lean, PLC, SCADA & Robotics</small>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li><a href="events.html" class="nav-link">Upcoming Events</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <a href="tel:+917078437914" class="btn btn-sm btn-outline">
+          <i class="fas fa-phone-alt"></i> <span>7078437914</span>
+        </a>
+        <a href="book-demo.html" class="btn btn-sm btn-primary">
+          <span>Book Demo</span> <i class="fas fa-arrow-right"></i>
+        </a>
+        <button id="mobile-toggle" class="mobile-toggle" aria-label="Open Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO SECTION (LUXURY EDITORIAL WITH PROFESSIONAL IMAGE SHOWCASE)
+       ========================================================================== -->
+  <section id="hero" class="hero-section">
+    <div class="container hero-grid">
+      <!-- Left Content -->
+      <div class="hero-content reveal-left">
+        <div class="hero-tag">
+          <span class="pill-badge">
+            <i class="fas fa-graduation-cap"></i> Campus to Corporate | Building Future-Ready Talent
+          </span>
+        </div>
+
+        <h1 class="hero-title">
+          Bridge the Gap Between <span class="gold-text">Classroom Theory</span> and <span class="gold-gradient-text">Corporate Mastery</span>
+        </h1>
+
+        <p class="hero-desc">
+          Empowering students, professionals, and faculty with <strong>Industry-Backed</strong>, <strong>Practical</strong>, and <strong>AI-Enabled</strong> training programs designed to drive exponential career growth and business impact.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="ai-training.html" class="btn btn-lg btn-primary">
+            <span>Explore AI Programs</span> <i class="fas fa-robot"></i>
+          </a>
+          <a href="book-demo.html" class="btn btn-lg btn-navy">
+            <span>Book Free Demo</span> <i class="fas fa-calendar-check"></i>
+          </a>
+          <button onclick="openBrochureModal('NexGen Comprehensive Program Suite')" class="btn btn-lg btn-outline">
+            <i class="fas fa-file-download"></i> <span>Download Syllabus</span>
+          </button>
+        </div>
+
+        <!-- Quick Stats Strip -->
+        <div class="hero-badges-strip">
+          <div class="stat-card">
+            <div class="stat-num counter" data-target="20" data-suffix="+">0</div>
+            <div class="stat-label">AI Tools Covered</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num counter" data-target="100" data-suffix="%">0</div>
+            <div class="stat-label">Practical Hands-On</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num counter" data-target="4" data-suffix="+">0</div>
+            <div class="stat-label">Specialized Tracks</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num counter" data-target="100" data-suffix="%">0</div>
+            <div class="stat-label">Industry Mentors</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Visual Showcase (High-Impact Hero Card Showcase) -->
+      <div class="hero-visual-wrapper reveal-right">
+        <div style="position:relative; width:100%; max-width:480px;">
+          <!-- Ambient Glow Backdrop -->
+          <div style="position:absolute; inset:-15px; background:radial-gradient(circle, rgba(212,160,23,0.18) 0%, rgba(7,21,43,0) 70%); border-radius:30px; pointer-events:none;"></div>
+
+          <!-- Main Hero Image Frame -->
+          <div style="border-radius:20px; overflow:hidden; border:2px solid var(--gold-primary); box-shadow:0 25px 60px rgba(7,21,43,0.15); background:#FFFFFF; position:relative;">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="Students and Professionals mastering AI and corporate leadership" style="width:100%; height:350px; object-fit:cover; display:block;">
+            
+            <div style="padding:1.25rem 1.4rem; background:#FFFFFF; border-top:1px solid var(--beige-sand); display:flex; justify-content:space-between; align-items:center;">
+              <div>
+                <strong style="color:var(--navy-deep); font-size:1.05rem; display:block; font-family:var(--font-serif);">NexGen Talent Accelerator</strong>
+                <small style="color:var(--gold-dark); font-weight:700;">AI Tools • 7 Habits • Industrial Tech</small>
+              </div>
+              <span class="pill-badge" style="font-size:0.72rem; padding:0.35rem 0.75rem;"><i class="fas fa-check-circle"></i> Industry Certified</span>
+            </div>
+          </div>
+
+          <!-- Floating Badges in Balanced Quadrants -->
+          <div class="orbit-card orbit-card-1">
+            <i class="fas fa-brain" style="color:var(--gold-dark);"></i>
+            <span>GenAI & Prompting</span>
+            <span style="display:inline-block; width:7px; height:7px; border-radius:50%; background:#10b981; margin-left:2px; box-shadow:0 0 6px #10b981;"></span>
+          </div>
+
+          <div class="orbit-card orbit-card-2">
+            <i class="fas fa-crown" style="color:var(--gold-dark);"></i>
+            <span>7 Habits Leadership</span>
+          </div>
+
+          <div class="orbit-card orbit-card-3">
+            <i class="fas fa-cogs" style="color:var(--gold-dark);"></i>
+            <span>PLC & Automation</span>
+          </div>
+
+          <div class="orbit-card orbit-card-4">
+            <i class="fas fa-star" style="color:#f59e0b;"></i>
+            <span>4.9/5 Rating</span>
+            <span style="color:var(--text-body-dark); font-size:0.72rem; font-weight:600;">(1.2k+ Reviews)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CORE 4 VALUE PILLARS
+       ========================================================================== -->
+  <section class="pillars-section">
+    <div class="container">
+      <div class="pillars-grid">
+        <!-- Pillar 1 -->
+        <div class="pillar-card reveal delay-100">
+          <div class="pillar-icon-box">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <h3 class="pillar-title">INDUSTRY-BACKED</h3>
+          <p class="pillar-sub">Real-world business experience curated and delivered by veteran corporate leaders and practitioners.</p>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="pillar-card reveal delay-200">
+          <div class="pillar-icon-box">
+            <i class="fas fa-sync-alt"></i>
+          </div>
+          <h3 class="pillar-title">PRACTICAL</h3>
+          <p class="pillar-sub"><strong>Learn → Apply → Improve.</strong> Zero passive rote theory; 100% immersive exercises and real case studies.</p>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="pillar-card reveal delay-300">
+          <div class="pillar-icon-box">
+            <i class="fas fa-microchip"></i>
+          </div>
+          <h3 class="pillar-title">AI-ENABLED</h3>
+          <p class="pillar-sub">AI seamlessly integrated into daily learning, workflows, analysis, and strategic execution.</p>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="pillar-card reveal delay-400">
+          <div class="pillar-icon-box">
+            <i class="fas fa-sliders-h"></i>
+          </div>
+          <h3 class="pillar-title">CUSTOMIZED</h3>
+          <p class="pillar-sub">Tailored learning roadmaps designed around specific learner profiles, campus needs, and enterprise goals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 01: ARTIFICIAL INTELLIGENCE TRAINING PROGRAMS
+       ========================================================================== -->
+  <section id="ai-programs" class="ai-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="pill-badge navy-theme">01 / 03 FLAGSHIP VERTICAL</span>
+        <h2 class="section-title">Artificial Intelligence <span class="gold-gradient-text">Training Programs</span></h2>
+        <p class="section-desc">
+          <strong>Why AI Matters Today:</strong> AI is no longer the future. It is the decisive competitive advantage of today.
+        </p>
+      </div>
+
+      <!-- Why AI Matters 3 Pillars -->
+      <div class="ai-why-grid reveal">
+        <div class="why-card">
+          <span class="why-icon"><i class="fas fa-stopwatch-20"></i></span>
+          <h4 class="why-title">TIME EFFICIENCY</h4>
+          <p>Save valuable hours every week. Automate repetitive manual tasks across sales, marketing, operations, and analysis.</p>
+        </div>
+
+        <div class="why-card">
+          <span class="why-icon"><i class="fas fa-brain"></i></span>
+          <h4 class="why-title">DECISION INTELLIGENCE</h4>
+          <p>Transform raw, complex data into high-value actionable insights faster, sharper, and with measurable accuracy.</p>
+        </div>
+
+        <div class="why-card">
+          <span class="why-icon"><i class="fas fa-trophy"></i></span>
+          <h4 class="why-title">COMPETITIVENESS</h4>
+          <p>Build AI-ready capabilities that position students and working professionals at the forefront of their industries.</p>
+        </div>
+      </div>
+
+      <!-- 4 Structured AI Programs -->
+      <div class="section-header reveal" style="margin-bottom: 2.5rem;">
+        <span class="pill-badge navy-theme">The NexGen AI Advantage</span>
+        <h3 class="section-title" style="font-size: 2.2rem; color:#FFFFFF;">4 Structured Programs For Every Level</h3>
+      </div>
+
+      <div class="programs-grid">
+        <!-- Program 1 -->
+        <div class="program-card reveal delay-100">
+          <div>
+            <div class="program-header">
+              <span class="program-num">01 | Foundation</span>
+              <span class="program-audience">Beginners & Students</span>
+            </div>
+            <h4 class="program-name">Understand & Use AI</h4>
+            <p class="program-target">Master Core Generative AI, Prompt Engineering & Everyday Productivity</p>
+            <ul class="program-features-list">
+              <li><i class="fas fa-check-circle"></i> Prompt Crafting for Research, Writing & Coding</li>
+              <li><i class="fas fa-check-circle"></i> Everyday Automation with ChatGPT, Claude & Perplexity</li>
+              <li><i class="fas fa-check-circle"></i> Safe & Ethical AI Practices for Academics & Projects</li>
+              <li><i class="fas fa-check-circle"></i> Capstone: AI-Powered Academic Portfolio Creation</li>
+            </ul>
+          </div>
+          <div class="program-footer">
+            <a href="ai-training.html" class="btn btn-sm btn-outline-gold">Explore Syllabus</a>
+            <a href="book-demo.html" class="btn btn-sm btn-primary">Enroll Now</a>
+          </div>
+        </div>
+
+        <!-- Program 2 -->
+        <div class="program-card featured reveal delay-200">
+          <div>
+            <div class="program-header">
+              <span class="program-num">02 | Accelerator</span>
+              <span class="program-audience">Working Professionals</span>
+            </div>
+            <h4 class="program-name">Apply AI at Work</h4>
+            <p class="program-target">High-Impact Workflow Automation & Business Intelligence</p>
+            <ul class="program-features-list">
+              <li><i class="fas fa-check-circle"></i> Automated Reporting, Excel & BI Dashboards with AI</li>
+              <li><i class="fas fa-check-circle"></i> Executive Communication & Content Scaling</li>
+              <li><i class="fas fa-check-circle"></i> No-Code Workflow Automation (Zapier, Make, Copilot)</li>
+              <li><i class="fas fa-check-circle"></i> Case Studies: Cross-Functional Operations Optimization</li>
+            </ul>
+          </div>
+          <div class="program-footer">
+            <a href="ai-training.html" class="btn btn-sm btn-outline-gold">Explore Syllabus</a>
+            <a href="book-demo.html" class="btn btn-sm btn-primary">Enroll Now</a>
+          </div>
+        </div>
+
+        <!-- Program 3 -->
+        <div class="program-card reveal delay-300">
+          <div>
+            <div class="program-header">
+              <span class="program-num">03 | Mastery</span>
+              <span class="program-audience">Advanced Learners</span>
+            </div>
+            <h4 class="program-name">Build AI-Powered Solutions</h4>
+            <p class="program-target">Autonomous AI Agents, APIs & Enterprise Integration</p>
+            <ul class="program-features-list">
+              <li><i class="fas fa-check-circle"></i> Custom GPTs, Autonomous Multi-Agent Workflows</li>
+              <li><i class="fas fa-check-circle"></i> Fine-Tuning, Embeddings & RAG Knowledge Retrieval</li>
+              <li><i class="fas fa-check-circle"></i> API Pipelines & Python-Driven AI Tooling</li>
+              <li><i class="fas fa-check-circle"></i> Capstone: Deploying a Custom Enterprise AI Assistant</li>
+            </ul>
+          </div>
+          <div class="program-footer">
+            <a href="ai-training.html" class="btn btn-sm btn-outline-gold">Explore Syllabus</a>
+            <a href="book-demo.html" class="btn btn-sm btn-primary">Enroll Now</a>
+          </div>
+        </div>
+
+        <!-- Program 4 -->
+        <div class="program-card reveal delay-400">
+          <div>
+            <div class="program-header">
+              <span class="program-num">04 | Train the Trainer</span>
+              <span class="program-audience">Faculty & Aspiring Trainers</span>
+            </div>
+            <h4 class="program-name">Enable Others to Learn AI</h4>
+            <p class="program-target">Pedagogy, Curriculum Architecture & AI Facilitation</p>
+            <ul class="program-features-list">
+              <li><i class="fas fa-check-circle"></i> Instructional Design for Modern Tech Learners</li>
+              <li><i class="fas fa-check-circle"></i> Lab Setup, Live Prompt Demonstrations & Grading with AI</li>
+              <li><i class="fas fa-check-circle"></i> Delivering High-Impact Institutional Workshops</li>
+              <li><i class="fas fa-check-circle"></i> Recognized NexGen Master Trainer Certification</li>
+            </ul>
+          </div>
+          <div class="program-footer">
+            <a href="ai-training.html" class="btn btn-sm btn-outline-gold">Explore Syllabus</a>
+            <a href="book-demo.html" class="btn btn-sm btn-primary">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 20+ AI Tools Covered Interactive Grid -->
+      <div class="ai-tools-box reveal">
+        <div class="tools-header">
+          <div>
+            <span class="pill-badge navy-theme"><i class="fas fa-tools"></i> 20+ AI Tools Covered</span>
+            <h3 style="font-size: 1.8rem; margin-top: 0.5rem; color: #fff;">Hands-On Toolkits You Will Master</h3>
+          </div>
+
+          <div class="tools-filter-pills">
+            <button class="tool-filter-btn active" data-filter="all">All Tools</button>
+            <button class="tool-filter-btn" data-filter="genai">GenAI & LLMs</button>
+            <button class="tool-filter-btn" data-filter="productivity">Productivity</button>
+            <button class="tool-filter-btn" data-filter="automation">Automation</button>
+            <button class="tool-filter-btn" data-filter="data">Data & Visuals</button>
+          </div>
+        </div>
+
+        <div class="tools-grid">
+          <div class="tool-item" data-category="genai">
+            <span class="tool-icon"><i class="fas fa-comment-dots"></i></span>
+            <span class="tool-name">ChatGPT Plus</span>
+            <span class="tool-category">GenAI</span>
+          </div>
+
+          <div class="tool-item" data-category="genai">
+            <span class="tool-icon"><i class="fas fa-feather-alt"></i></span>
+            <span class="tool-name">Claude 3.5</span>
+            <span class="tool-category">GenAI</span>
+          </div>
+
+          <div class="tool-item" data-category="genai">
+            <span class="tool-icon"><i class="fas fa-search"></i></span>
+            <span class="tool-name">Perplexity AI</span>
+            <span class="tool-category">Research</span>
+          </div>
+
+          <div class="tool-item" data-category="data">
+            <span class="tool-icon"><i class="fas fa-paint-brush"></i></span>
+            <span class="tool-name">Midjourney</span>
+            <span class="tool-category">Visuals</span>
+          </div>
+
+          <div class="tool-item" data-category="productivity">
+            <span class="tool-icon"><i class="fas fa-file-invoice"></i></span>
+            <span class="tool-name">Notion AI</span>
+            <span class="tool-category">Productivity</span>
+          </div>
+
+          <div class="tool-item" data-category="automation">
+            <span class="tool-icon"><i class="fas fa-bolt"></i></span>
+            <span class="tool-name">Zapier AI</span>
+            <span class="tool-category">Automation</span>
+          </div>
+
+          <div class="tool-item" data-category="automation">
+            <span class="tool-icon"><i class="fas fa-network-wired"></i></span>
+            <span class="tool-name">Make.com</span>
+            <span class="tool-category">Automation</span>
+          </div>
+
+          <div class="tool-item" data-category="productivity">
+            <span class="tool-icon"><i class="fas fa-laptop-code"></i></span>
+            <span class="tool-name">MS Copilot</span>
+            <span class="tool-category">Office 365</span>
+          </div>
+
+          <div class="tool-item" data-category="data">
+            <span class="tool-icon"><i class="fas fa-chart-pie"></i></span>
+            <span class="tool-name">Julius AI</span>
+            <span class="tool-category">Data Science</span>
+          </div>
+
+          <div class="tool-item" data-category="productivity">
+            <span class="tool-icon"><i class="fas fa-video"></i></span>
+            <span class="tool-name">HeyGen</span>
+            <span class="tool-category">Video AI</span>
+          </div>
+
+          <div class="tool-item" data-category="genai">
+            <span class="tool-icon"><i class="fas fa-code-branch"></i></span>
+            <span class="tool-name">GitHub Copilot</span>
+            <span class="tool-category">Code AI</span>
+          </div>
+
+          <div class="tool-item" data-category="productivity">
+            <span class="tool-icon"><i class="fas fa-chart-bar"></i></span>
+            <span class="tool-name">Gamma App</span>
+            <span class="tool-category">Presentations</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 02: CAMPUS TO CORPORATE LEARNING SOLUTIONS (4 QUADRANTS)
+       ========================================================================== -->
+  <section id="c2c-solutions" class="c2c-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="pill-badge">02 / 03 FLAGSHIP VERTICAL</span>
+        <h2 class="section-title">Campus to Corporate <span class="gold-text">Skill Development</span></h2>
+        <p class="section-desc">
+          We integrate AI into the foundational ways people <strong>Lead</strong>, <strong>Work</strong>, <strong>Learn</strong>, and <strong>Grow</strong>.
+        </p>
+      </div>
+
+      <!-- Book Inspiration Callout -->
+      <div class="book-inspiration-banner reveal">
+        <div class="book-icon-badge">
+          <i class="fas fa-book-open"></i>
+        </div>
+        <div class="book-text">
+          <h4>Inspired by Globally Acclaimed Management Frameworks</h4>
+          <p>NexGen is among the pioneering platforms blending practical AI toolkits with world-renowned philosophies from <em>The 7 Habits of Highly Effective People</em> by Stephen Covey, <em>Atomic Habits</em> by James Clear, and Lean Agile Mindsets.</p>
+        </div>
+      </div>
+
+      <!-- 4 Quadrants Interactive Grid -->
+      <div class="c2c-quadrant-grid">
+        <!-- Quadrant 1: LEAD -->
+        <div class="quadrant-card lead-card reveal delay-100">
+          <div class="quadrant-badge">
+            <i class="fas fa-crown" style="color:var(--gold-dark);"></i> AI + LEAD
+          </div>
+          <p style="color: var(--text-body-dark); font-size: 0.95rem;">
+            Cultivate leadership maturity, high-stakes decision agility, and collaborative team stewardship.
+          </p>
+          <div class="quadrant-skills-tags">
+            <span class="skill-tag"><i class="fas fa-crown"></i> Leadership Mindset</span>
+            <span class="skill-tag"><i class="fas fa-bullseye"></i> Decision Making</span>
+            <span class="skill-tag"><i class="fas fa-users"></i> Team Leadership</span>
+            <span class="skill-tag"><i class="fas fa-handshake"></i> Conflict Management</span>
+            <span class="skill-tag"><i class="fas fa-tasks"></i> Delegation Frameworks</span>
+          </div>
+        </div>
+
+        <!-- Quadrant 2: WORK -->
+        <div class="quadrant-card work-card reveal delay-200">
+          <div class="quadrant-badge">
+            <i class="fas fa-briefcase" style="color:var(--navy-deep);"></i> AI + WORK
+          </div>
+          <p style="color: var(--text-body-dark); font-size: 0.95rem;">
+            Drive day-to-day operational excellence, razor-sharp communication, and frictionless workplace productivity.
+          </p>
+          <div class="quadrant-skills-tags">
+            <span class="skill-tag"><i class="fas fa-robot"></i> AI & Productivity</span>
+            <span class="skill-tag"><i class="fas fa-comments"></i> Communication Skills</span>
+            <span class="skill-tag"><i class="fas fa-lightbulb"></i> Critical Thinking</span>
+            <span class="skill-tag"><i class="fas fa-clock"></i> Time Management</span>
+            <span class="skill-tag"><i class="fas fa-chart-line"></i> Business Storytelling</span>
+          </div>
+        </div>
+
+        <!-- Quadrant 3: LEARN -->
+        <div class="quadrant-card learn-card reveal delay-300">
+          <div class="quadrant-badge">
+            <i class="fas fa-graduation-cap" style="color:var(--gold-dark);"></i> AI + LEARN
+          </div>
+          <p style="color: var(--text-body-dark); font-size: 0.95rem;">
+            Accelerate cognitive agility, institutional knowledge absorption, and structured strategic diagnostics.
+          </p>
+          <div class="quadrant-skills-tags">
+            <span class="skill-tag"><i class="fas fa-chess-knight"></i> Strategic Thinking</span>
+            <span class="skill-tag"><i class="fas fa-compass"></i> Coaching & Mentoring</span>
+            <span class="skill-tag"><i class="fas fa-chart-pie"></i> SWOT & RCA Analysis</span>
+            <span class="skill-tag"><i class="fas fa-sync-alt"></i> Habit Loops</span>
+            <span class="skill-tag"><i class="fas fa-book-reader"></i> Continuous Learning</span>
+          </div>
+        </div>
+
+        <!-- Quadrant 4: GROW -->
+        <div class="quadrant-card grow-card reveal delay-400">
+          <div class="quadrant-badge">
+            <i class="fas fa-seedling" style="color:#10b981;"></i> AI + GROW
+          </div>
+          <p style="color: var(--text-body-dark); font-size: 0.95rem;">
+            Build lifelong career resilience, future-skills awareness, stress management, and emotional intelligence.
+          </p>
+          <div class="quadrant-skills-tags">
+            <span class="skill-tag"><i class="fas fa-rocket"></i> Future Skills Awareness</span>
+            <span class="skill-tag"><i class="fas fa-map-marked-alt"></i> Career Roadmap Planning</span>
+            <span class="skill-tag"><i class="fas fa-brain"></i> Emotional Intelligence</span>
+            <span class="skill-tag"><i class="fas fa-spa"></i> Stress Management</span>
+            <span class="skill-tag"><i class="fas fa-user-tie"></i> Interview Readiness</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="c2c-skills.html" class="btn btn-lg btn-navy">
+          <span>Explore Campus to Corporate Program</span> <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 03: INDUSTRY-READY TECHNICAL SKILLS
+       ========================================================================== -->
+  <section id="tech-skills" class="technical-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="pill-badge">03 / 03 FLAGSHIP VERTICAL</span>
+        <h2 class="section-title">Industrial Oriented <span class="gold-text">Technical Skills</span></h2>
+        <p class="section-desc">
+          Practical shop-floor and plant-automation engineering skills that corporate recruiters demand.
+        </p>
+      </div>
+
+      <div class="tech-cards-grid">
+        <!-- Tech Card 1: Operational Excellence -->
+        <div class="tech-card reveal delay-100">
+          <div>
+            <div class="tech-icon-circle">
+              <i class="fas fa-medal"></i>
+            </div>
+            <h3 class="tech-card-title">Operational Excellence</h3>
+            <p style="color: var(--text-body-dark); font-size:0.92rem;">World-class manufacturing frameworks and root-cause problem solving methodologies.</p>
+
+            <ul class="tech-topics-list">
+              <li><i class="fas fa-check" style="color: var(--gold-dark);"></i> Lean Manufacturing & 5S</li>
+              <li><i class="fas fa-check" style="color: var(--gold-dark);"></i> Quality Control & TQM</li>
+              <li><i class="fas fa-check" style="color: var(--gold-dark);"></i> TPM (Total Productive Maint.)</li>
+              <li><i class="fas fa-check" style="color: var(--gold-dark);"></i> RCA (Root Cause Analysis)</li>
+              <li><i class="fas fa-check" style="color: var(--gold-dark);"></i> 8D Problem Solving Methodology</li>
+            </ul>
+          </div>
+          <a href="industrial-training.html" class="btn btn-outline" style="width: 100%;">Explore Curriculum</a>
+        </div>
+
+        <!-- Tech Card 2: Industrial Automation -->
+        <div class="tech-card reveal delay-200">
+          <div>
+            <div class="tech-icon-circle">
+              <i class="fas fa-sliders-h"></i>
+            </div>
+            <h3 class="tech-card-title">Industrial Automation</h3>
+            <p style="color: var(--text-body-dark); font-size:0.92rem;">End-to-end industrial control engineering, PLC programming, and plant telemetry.</p>
+
+            <ul class="tech-topics-list">
+              <li><i class="fas fa-check" style="color: var(--gold-dark);"></i> PLC Programming (Siemens/AB)</li>
+              <li><i class="fas fa-check" style="color: var(--gold-dark);"></i> HMI & SCADA Interface Design</li>
+              <li><i class="fas fa-check" style="color: var(--gold-dark);"></i> Industrial Sensors & Actuators</li>
+              <li><i class="fas fa-check" style="color: var(--gold-dark);"></i> Hydraulics & Pneumatics</li>
+              <li><i class="fas fa-check" style="color: var(--gold-dark);"></i> Closed Loop Control Systems</li>
+            </ul>
+          </div>
+          <a href="industrial-training.html" class="btn btn-outline" style="width: 100%;">Explore Curriculum</a>
+        </div>
+
+        <!-- Tech Card 3: Industrial Robotics -->
+        <div class="tech-card reveal delay-300">
+          <div>
+            <div class="tech-icon-circle">
+              <i class="fas fa-robot"></i>
+            </div>
+            <h3 class="tech-card-title">Industrial Robotics</h3>
+            <p style="color: var(--text-body-dark); font-size:0.92rem;">Next-gen motion dynamics, servo precision drives, and robotic cell integration.</p>
+
+            <ul class="tech-topics-list">
+              <li><i class="fas fa-check" style="color: var(--gold-dark);"></i> Multi-Axis Motion Control</li>
+              <li><i class="fas fa-check" style="color: var(--gold-dark);"></i> Servo Drives & Kinematics</li>
+              <li><i class="fas fa-check" style="color: var(--gold-dark);"></i> VFD (Variable Frequency Drives)</li>
+              <li><i class="fas fa-check" style="color: var(--gold-dark);"></i> Articulated Robot Programming</li>
+              <li><i class="fas fa-check" style="color: var(--gold-dark);"></i> Industry 4.0 Smart Factory Setup</li>
+            </ul>
+          </div>
+          <a href="industrial-training.html" class="btn btn-outline" style="width: 100%;">Explore Curriculum</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       DYNAMIC GALLERY SECTION
+       ========================================================================== -->
+  <section id="gallery" class="gallery-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="pill-badge"><i class="fas fa-images"></i> LIFE AT NEXGEN</span>
+        <h2 class="section-title">Training <span class="gold-text">Gallery & Workshops</span></h2>
+        <p class="section-desc">Glimpses of live college bootcamps, corporate executive sessions, and hardware automation labs.</p>
+      </div>
+
+      <div class="gallery-filter-bar reveal">
+        <button class="tool-filter-btn gallery-filter-btn active" data-category="all">All Photos</button>
+        <button class="tool-filter-btn gallery-filter-btn" data-category="Campus">Campus Workshops</button>
+        <button class="tool-filter-btn gallery-filter-btn" data-category="Corporate">Corporate Training</button>
+        <button class="tool-filter-btn gallery-filter-btn" data-category="Technical">Automation Labs</button>
+      </div>
+
+      <!-- Injected dynamically from Store JS -->
+      <div id="dynamic-gallery-grid" class="gallery-grid reveal"></div>
+
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="gallery.html" class="btn btn-outline">
+          <span>View Full Photo Gallery</span> <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       DYNAMIC TESTIMONIALS SECTION
+       ========================================================================== -->
+  <section id="testimonials" class="testimonials-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="pill-badge"><i class="fas fa-star"></i> REVIEWS & SUCCESS</span>
+        <h2 class="section-title">What Our <span class="gold-text">Learners & Partners Say</span></h2>
+        <p class="section-desc">Real stories of transformation from students, placement directors, and industry executives.</p>
+      </div>
+
+      <!-- Injected dynamically from Store JS -->
+      <div id="dynamic-testimonials-grid" class="testimonials-grid"></div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 04: THE NEXGEN LEARNING MODEL (5 STEPS)
+       ========================================================================== -->
+  <section id="learning-model" class="learning-model-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="pill-badge navy-theme">THE LEARNING CYCLE</span>
+        <h2 class="section-title">The NexGen <span class="gold-gradient-text">Learning Model</span></h2>
+        <p class="section-desc">
+          A scientifically structured 5-step methodology that guarantees measurable capability transformation.
+        </p>
+      </div>
+
+      <div class="model-steps-timeline">
+        <!-- Step 1 -->
+        <div class="model-step-card reveal delay-100">
+          <div class="step-number-bubble">01</div>
+          <h4 class="step-title">Assessment</h4>
+          <p class="step-desc">Understand current capability gaps, baseline skills, and target career goals.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="model-step-card reveal delay-200">
+          <div class="step-number-bubble">02</div>
+          <h4 class="step-title">Training</h4>
+          <p class="step-desc">Build robust foundational knowledge, tool proficiency, and analytical frameworks.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="model-step-card reveal delay-300">
+          <div class="step-number-bubble">03</div>
+          <h4 class="step-title">Practice</h4>
+          <p class="step-desc">Apply acquired tools through real-world simulations, projects, and lab activities.</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="model-step-card reveal delay-400">
+          <div class="step-number-bubble">04</div>
+          <h4 class="step-title">Improvement</h4>
+          <p class="step-desc">Strengthen execution capability through personalized mentor feedback & iterative review.</p>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="model-step-card reveal delay-500">
+          <div class="step-number-bubble">05</div>
+          <h4 class="step-title">Performance</h4>
+          <p class="step-desc">Convert learning into tangible career outcomes, workplace promotions & measurable ROI.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       INTERACTIVE CAREER TRACK MATCHER QUIZ
+       ========================================================================== -->
+  <section id="quiz" class="quiz-section">
+    <div class="container">
+      <div class="quiz-container-box reveal">
+        <div style="text-align: center; margin-bottom: 2rem;">
+          <span class="pill-badge"><i class="fas fa-compass"></i> Interactive Program Matcher</span>
+          <h3 style="font-size: 2rem; color: var(--navy-deep); margin-top: 0.5rem; font-family:var(--font-serif);">Find Your Ideal Track in 3 Clicks</h3>
+          <p style="color: var(--text-body-dark); font-size: 0.95rem;">Answer 3 quick questions to receive a tailored NexGen learning path recommendation.</p>
+        </div>
+
+        <div class="quiz-progress-bar">
+          <div class="quiz-progress-fill"></div>
+        </div>
+
+        <!-- Step 1 -->
+        <div id="quiz-step-1" class="quiz-step active">
+          <h4 style="font-size: 1.25rem; color: var(--navy-deep); margin-bottom: 1rem; font-family:var(--font-serif);">Question 1: What best describes your current profile?</h4>
+          <div class="quiz-options-grid">
+            <div class="quiz-option-card" onclick="selectQuizOption(1, 'role', 'student', this)">
+              <i class="fas fa-user-graduate" style="font-size: 1.5rem; color: var(--navy-deep);"></i>
+              <div>
+                <strong style="color: var(--navy-deep); display: block;">College Student / Fresh Graduate</strong>
+                <small style="color: var(--text-body-dark);">Looking to crack high-paying corporate roles</small>
+              </div>
+            </div>
+
+            <div class="quiz-option-card" onclick="selectQuizOption(1, 'role', 'pro', this)">
+              <i class="fas fa-user-tie" style="font-size: 1.5rem; color: var(--gold-dark);"></i>
+              <div>
+                <strong style="color: var(--navy-deep); display: block;">Working Professional</strong>
+                <small style="color: var(--text-body-dark);">Aiming to automate work and step up into leadership</small>
+              </div>
+            </div>
+
+            <div class="quiz-option-card" onclick="selectQuizOption(1, 'role', 'faculty', this)">
+              <i class="fas fa-chalkboard-teacher" style="font-size: 1.5rem; color: #10b981;"></i>
+              <div>
+                <strong style="color: var(--navy-deep); display: block;">Faculty / Trainer / Educator</strong>
+                <small style="color: var(--text-body-dark);">Wanting to teach AI & modern methodologies</small>
+              </div>
+            </div>
+
+            <div class="quiz-option-card" onclick="selectQuizOption(1, 'role', 'enterprise', this)">
+              <i class="fas fa-building" style="font-size: 1.5rem; color: #8b5cf6;"></i>
+              <div>
+                <strong style="color: var(--navy-deep); display: block;">Corporate Leader / HR Manager</strong>
+                <small style="color: var(--text-body-dark);">Upskilling entire teams for Industry 4.0</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div id="quiz-step-2" class="quiz-step">
+          <h4 style="font-size: 1.25rem; color: var(--navy-deep); margin-bottom: 1rem; font-family:var(--font-serif);">Question 2: What is your primary learning focus?</h4>
+          <div class="quiz-options-grid">
+            <div class="quiz-option-card" onclick="selectQuizOption(2, 'goal', 'ai', this)">
+              <i class="fas fa-robot" style="font-size: 1.5rem; color: var(--navy-deep);"></i>
+              <div>
+                <strong style="color: var(--navy-deep); display: block;">AI Tools & Workflow Automation</strong>
+                <small style="color: var(--text-body-dark);">ChatGPT, Claude, Prompting, No-code automations</small>
+              </div>
+            </div>
+
+            <div class="quiz-option-card" onclick="selectQuizOption(2, 'goal', 'leadership', this)">
+              <i class="fas fa-users" style="font-size: 1.5rem; color: var(--gold-dark);"></i>
+              <div>
+                <strong style="color: var(--navy-deep); display: block;">Campus to Corporate Leadership</strong>
+                <small style="color: var(--text-body-dark);">7 Habits, Communication, Strategic Thinking</small>
+              </div>
+            </div>
+
+            <div class="quiz-option-card" onclick="selectQuizOption(2, 'goal', 'technical', this)">
+              <i class="fas fa-cogs" style="font-size: 1.5rem; color: #10b981;"></i>
+              <div>
+                <strong style="color: var(--navy-deep); display: block;">Industrial Automation & Lean</strong>
+                <small style="color: var(--text-body-dark);">PLC/SCADA, Robotics, Lean Six Sigma, 8D</small>
+              </div>
+            </div>
+
+            <div class="quiz-option-card" onclick="selectQuizOption(2, 'goal', 'allround', this)">
+              <i class="fas fa-gem" style="font-size: 1.5rem; color: #8b5cf6;"></i>
+              <div>
+                <strong style="color: var(--navy-deep); display: block;">All-Round Future-Ready Mastery</strong>
+                <small style="color: var(--text-body-dark);">Combined AI, Leadership, and Technical Skills</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div id="quiz-step-3" class="quiz-step">
+          <h4 style="font-size: 1.25rem; color: var(--navy-deep); margin-bottom: 1rem; font-family:var(--font-serif);">Question 3: Preferred learning format?</h4>
+          <div class="quiz-options-grid">
+            <div class="quiz-option-card" onclick="selectQuizOption(3, 'format', 'weekend', this)">
+              <i class="fas fa-calendar-alt" style="font-size: 1.5rem; color: var(--gold-dark);"></i>
+              <div>
+                <strong style="color: var(--navy-deep); display: block;">Live Interactive Weekend Batches</strong>
+                <small style="color: var(--text-body-dark);">Flexible for working folks & students</small>
+              </div>
+            </div>
+
+            <div class="quiz-option-card" onclick="selectQuizOption(3, 'format', 'bootcamp', this)">
+              <i class="fas fa-bolt" style="font-size: 1.5rem; color: var(--navy-deep);"></i>
+              <div>
+                <strong style="color: var(--navy-deep); display: block;">Intensive Fast-Track Bootcamp</strong>
+                <small style="color: var(--text-body-dark);">Rapid immersive learning</small>
+              </div>
+            </div>
+
+            <div class="quiz-option-card" onclick="selectQuizOption(3, 'format', 'campus', this)">
+              <i class="fas fa-university" style="font-size: 1.5rem; color: #10b981;"></i>
+              <div>
+                <strong style="color: var(--navy-deep); display: block;">On-Campus / College Workshop</strong>
+                <small style="color: var(--text-body-dark);">Custom institutional delivery</small>
+              </div>
+            </div>
+
+            <div class="quiz-option-card" onclick="selectQuizOption(3, 'format', 'corporate', this)">
+              <i class="fas fa-handshake" style="font-size: 1.5rem; color: #8b5cf6;"></i>
+              <div>
+                <strong style="color: var(--navy-deep); display: block;">Custom Enterprise Training</strong>
+                <small style="color: var(--text-body-dark);">Tailored for corporate workforces</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quiz Result Screen -->
+        <div id="quiz-result" class="quiz-step" style="text-align: center; padding: 1.5rem 0;">
+          <span style="font-size: 3rem; color: var(--gold-dark); display: block; margin-bottom: 1rem;"><i class="fas fa-award"></i></span>
+          <span class="pill-badge">Recommended Learning Track</span>
+          <h3 id="quiz-result-title" style="font-size: 1.9rem; color: var(--navy-deep); margin: 1rem 0 0.6rem 0; font-family:var(--font-serif);">AI Foundation & Campus to Corporate Track</h3>
+          <p id="quiz-result-desc" style="max-width: 650px; margin: 0 auto 2rem auto; color: var(--text-body-dark); font-size: 1.05rem;">
+            Build practical AI productivity skills, automate workflows, and master strategic decision-making with hands-on toolkits.
+          </p>
+
+          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="book-demo.html" class="btn btn-primary">
+              <span>Book Demo for This Track</span> <i class="fas fa-arrow-right"></i>
+            </a>
+            <button onclick="openBrochureModal('Recommended Customized Track')" class="btn btn-navy">
+              <i class="fas fa-download"></i> Get Syllabus PDF
+            </button>
+            <button onclick="resetQuiz()" class="btn btn-outline">
+              <i class="fas fa-redo"></i> Retake Quiz
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FAQ SECTION
+       ========================================================================== -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="pill-badge">HAVE QUESTIONS?</span>
+        <h2 class="section-title">Frequently Asked <span class="gold-text">Questions</span></h2>
+        <p class="section-desc">Everything you need to know about NexGen training programs, certifications, and delivery formats.</p>
+      </div>
+
+      <div class="faq-list reveal">
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What makes NexGen C2C Skills unique compared to other online courses?</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>NexGen combines 100% hands-on AI tools practice with globally celebrated corporate mindset frameworks (such as <em>The 7 Habits of Highly Effective People</em> and <em>Atomic Habits</em>) along with authentic shop-floor technical engineering (PLC, Lean, Robotics). You don't just learn concepts; you build measurable workplace capabilities.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Do I need a technical coding background to join the AI Foundation course?</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>No prior coding experience is required for the Foundation and Accelerator tracks! We focus on prompt crafting, no-code AI tools, everyday productivity, research, writing, and decision automation accessible to all students and professionals.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What certifications will I receive upon completing a program?</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>You will receive an Industry-Recognized NexGen C2C Certificate of Completion detailing your capstone projects, specific AI tools mastered, and hours of hands-on practical training to showcase directly on LinkedIn and your resume.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Can NexGen conduct customized workshops for our college or company?</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Yes! We specialize in tailored institutional training for colleges (Faculty Development Programs, student finishing schools) and corporate organizations (custom AI adoption, Lean manufacturing, and PLC automation batches).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CONTACT & ENROLLMENT SECTION
+       ========================================================================== -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="contact-wrapper reveal">
+        <!-- Contact Info Left Column -->
+        <div class="contact-info-col">
+          <div>
+            <span class="pill-badge"><i class="fas fa-paper-plane"></i> Get In Touch</span>
+            <h2 style="font-size: 2.2rem; color: var(--navy-deep); margin: 1rem 0 0.8rem 0; font-family:var(--font-serif);">Are You Ready to Build Future-Ready Talent?</h2>
+            <p style="color: var(--text-body-dark); line-height: 1.6;">
+              Speak with our senior program advisors today. Get your personalized syllabus, batch schedule, and scholarship details.
+            </p>
+
+            <div class="contact-methods">
+              <div class="contact-method-item">
+                <div class="contact-icon-box">
+                  <i class="fas fa-phone-alt"></i>
+                </div>
+                <div>
+                  <small style="color: var(--text-body-dark); display: block; text-transform: uppercase; font-weight:700;">Direct Hotline</small>
+                  <a href="tel:+917078437914" style="color: var(--navy-deep); font-size: 1.2rem; font-weight: 700;">+91 7078437914</a>
+                </div>
+              </div>
+
+              <div class="contact-method-item">
+                <div class="contact-icon-box">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div>
+                  <small style="color: var(--text-body-dark); display: block; text-transform: uppercase; font-weight:700;">Official Email</small>
+                  <a href="mailto:Info@nexgenc2cskills.com" style="color: var(--navy-deep); font-size: 1.1rem; font-weight: 700;">Info@nexgenc2cskills.com</a>
+                </div>
+              </div>
+
+              <div class="contact-method-item">
+                <div class="contact-icon-box">
+                  <i class="fas fa-globe"></i>
+                </div>
+                <div>
+                  <small style="color: var(--text-body-dark); display: block; text-transform: uppercase; font-weight:700;">Official Website</small>
+                  <a href="https://www.nexgenc2cskills.com" target="_blank" rel="noopener" style="color: var(--navy-deep); font-size: 1.1rem; font-weight: 700;">www.nexgenc2cskills.com</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="padding-top: 1.5rem; border-top: 1px solid var(--beige-sand);">
+            <p style="font-size: 0.85rem; color: var(--text-body-dark);">
+              <i class="fas fa-shield-alt" style="color: var(--gold-dark);"></i> 100% Privacy Guaranteed. Your details are safe with us.
+            </p>
+          </div>
+        </div>
+
+        <!-- Contact Lead Form -->
+        <div>
+          <form id="main-contact-form" class="contact-form">
+            <h3 style="font-size: 1.5rem; color: var(--navy-deep); margin-bottom: 0.3rem; font-family:var(--font-serif);">Request Counseling & Brochure</h3>
+            <p style="color: var(--text-body-dark); font-size: 0.9rem; margin-bottom: 1.2rem;">Fill out the form below to receive immediate course details on WhatsApp.</p>
+
+            <div class="form-group">
+              <label for="form-name">Your Full Name *</label>
+              <input type="text" id="form-name" class="form-control" placeholder="e.g. Rahul Sharma" required>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <div class="form-group">
+                <label for="form-phone">WhatsApp Phone *</label>
+                <input type="tel" id="form-phone" class="form-control" placeholder="e.g. 9876543210" required>
+              </div>
+              <div class="form-group">
+                <label for="form-email">Email Address</label>
+                <input type="email" id="form-email" class="form-control" placeholder="rahul@example.com">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="form-track">Select Program Track *</label>
+              <select id="form-track" class="form-control" required>
+                <option value="AI Training - Foundation Track (Students)">01 | AI Foundation Track (Students & Beginners)</option>
+                <option value="AI Training - Accelerator Track (Working Pros)">02 | AI Accelerator Track (Working Professionals)</option>
+                <option value="AI Training - Mastery Track (Advanced)">03 | AI Mastery Track (Advanced AI Solutions)</option>
+                <option value="AI Training - Train The Trainer">04 | AI Train The Trainer (Faculty Certification)</option>
+                <option value="Campus to Corporate - Leadership & Soft Skills">Campus to Corporate (C2C) Leadership Solutions</option>
+                <option value="Technical - Operational Excellence (Lean/8D)">Operational Excellence (Lean / Quality / TPM / 8D)</option>
+                <option value="Technical - Industrial Automation (PLC/HMI)">Industrial Automation (PLC / HMI / Sensors / Controls)</option>
+                <option value="Technical - Industrial Robotics (Servo/VFD)">Industrial Robotics (Motion Control / Servo / VFD)</option>
+                <option value="Institutional / Corporate Partnership">Institutional Campus / Corporate Custom Workshop</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="form-message">Message / Queries (Optional)</label>
+              <textarea id="form-message" rows="3" class="form-control" placeholder="Tell us about your learning goals or batch queries..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">
+              <span>Submit & Chat with Advisor</span> <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand Info -->
+        <div class="footer-col">
+          <div class="brand-logo" style="margin-bottom: 1.2rem;">
+            <img src="assets/images/logo.png" alt="NexGen C2C Skills Logo" width="46" height="46">
+            <div class="brand-text">
+              <span class="brand-title" style="font-size: 1.25rem; color:#FFFFFF;">NexGen</span>
+              <span class="brand-subtitle" style="color:var(--gold-light);">C2C Skills</span>
+            </div>
+          </div>
+          <p style="font-size: 0.9rem; margin-bottom: 1.2rem; color: var(--text-muted-light);">
+            Campus to Corporate | Building Future-Ready Talent with practical AI workflows, leadership frameworks, and industrial technical mastery.
+          </p>
+          <div style="display: flex; gap: 0.8rem;">
+            <a href="tel:+917078437914" class="btn btn-sm btn-navy"><i class="fas fa-phone-alt"></i></a>
+            <a href="mailto:Info@nexgenc2cskills.com" class="btn btn-sm btn-navy"><i class="fas fa-envelope"></i></a>
+            <a href="https://wa.me/917078437914" target="_blank" rel="noopener" class="btn btn-sm btn-navy"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: AI Programs -->
+        <div class="footer-col">
+          <h4>Explore Programs</h4>
+          <ul class="footer-links">
+            <li><a href="ai-training.html">Artificial Intelligence Training</a></li>
+            <li><a href="c2c-skills.html">Campus to Corporate (C2C)</a></li>
+            <li><a href="industrial-training.html">Industrial Oriented Training</a></li>
+            <li><a href="events.html">Upcoming Webinars & Events</a></li>
+            <li><a href="gallery.html">Workshops & Life Gallery</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Portal Links -->
+        <div class="footer-col">
+          <h4>NexGen Portal</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Our Mission</a></li>
+            <li><a href="blog.html">Knowledge Hub & Blog</a></li>
+            <li><a href="book-demo.html">Book Free Demo Session</a></li>
+            <li><a href="contact.html">Contact Advisory Team</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact & Verification -->
+        <div class="footer-col">
+          <h4>Official Contact</h4>
+          <ul class="footer-links">
+            <li><i class="fas fa-phone-alt" style="color: var(--gold-light); margin-right: 0.5rem;"></i> +91 7078437914</li>
+            <li><i class="fas fa-envelope" style="color: var(--gold-light); margin-right: 0.5rem;"></i> Info@nexgenc2cskills.com</li>
+            <li><i class="fas fa-globe" style="color: var(--gold-light); margin-right: 0.5rem;"></i> www.nexgenc2cskills.com</li>
+            <li style="margin-top: 0.8rem;">
+              <span class="pill-badge navy-theme" style="font-size: 0.72rem;"><i class="fas fa-check-circle"></i> ISO / Industry Standard</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 <strong>NexGen C2C Skills</strong>. All Rights Reserved. Building Future-Ready Talent.
+        </div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal -->
+  <div id="gallery-lightbox" class="lightbox-modal">
+    <div class="lightbox-img-wrapper">
+      <button class="modal-close-btn" onclick="closeLightbox()" style="position:absolute; top:-30px; right:0; color:#fff;">&times;</button>
+      <img id="lightbox-img" src="" alt="Gallery Image Preview">
+      <div style="margin-top:1rem;">
+        <span id="lightbox-tag" class="pill-badge"></span>
+        <h3 id="lightbox-title" style="color:#fff; margin-top:0.4rem; font-family:var(--font-serif);"></h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Brochure Download Modal -->
+  <div id="brochure-modal" class="modal-overlay">
+    <div class="modal-content-box">
+      <button class="modal-close-btn" onclick="closeModal('brochure-modal')" aria-label="Close Modal">&times;</button>
+      <span class="pill-badge"><i class="fas fa-file-pdf"></i> Official Course Curriculum</span>
+      <h3 id="modal-course-title" style="font-size: 1.6rem; color: var(--navy-deep); margin: 0.8rem 0 0.4rem 0; font-family:var(--font-serif);">NexGen Comprehensive Brochure</h3>
+      <p style="color: var(--text-body-dark); font-size: 0.9rem; margin-bottom: 1.5rem;">
+        Enter your contact details to download the complete syllabus and curriculum breakdown instantly.
+      </p>
+
+      <form id="brochure-download-form" class="contact-form">
+        <div class="form-group">
+          <label for="b-name">Your Name *</label>
+          <input type="text" id="b-name" class="form-control" placeholder="e.g. Priya Sharma" required>
+        </div>
+        <div class="form-group">
+          <label for="b-phone">WhatsApp Number *</label>
+          <input type="tel" id="b-phone" class="form-control" placeholder="e.g. 9876543210" required>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">
+          <i class="fas fa-download"></i> <span>Send Syllabus on WhatsApp</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Floating Direct WhatsApp Button -->
+  <a href="https://wa.me/917078437914?text=Hi%20NexGen%20C2C%20Skills%20Team%2C%20I%20am%20interested%20in%20your%20training%20programs." 
+     target="_blank" 
+     rel="noopener" 
+     class="floating-whatsapp" 
+     title="Chat with Us on WhatsApp" 
+     aria-label="WhatsApp Chat">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Back to Top Floating Button -->
+  <button id="back-to-top" class="back-to-top" title="Scroll to Top" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="assets/js/store.js"></script>
+  <script src="assets/js/canvas-bg.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

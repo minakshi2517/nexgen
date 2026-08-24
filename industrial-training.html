@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Industrial Oriented Training | Lean, PLC & Robotics | NexGen</title>
+  <meta name="description" content="Master hands-on industrial engineering: Operational Excellence (Lean, TPM, 8D), Industrial Automation (PLC, HMI, SCADA), and Industrial Robotics (Servo, VFD).">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+</head>
+<body>
+  <canvas id="bg-canvas"></canvas>
+
+  <header class="header-nav">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/images/logo.png" alt="NexGen C2C Skills Official Logo" width="54" height="54">
+        <div class="brand-text">
+          <span class="brand-title">NexGen</span>
+          <span class="brand-subtitle">C2C Skills</span>
+        </div>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li class="nav-dropdown">
+          <a href="programs.html" class="nav-link active"><span>Our Programs</span> <i class="fas fa-chevron-down" style="font-size:0.75rem;"></i></a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-item"><a href="programs.html"><i class="fas fa-th-large"></i> All Programs Overview</a></li>
+            <li class="dropdown-item"><a href="ai-training.html"><i class="fas fa-robot"></i> AI Training Programs</a></li>
+            <li class="dropdown-item"><a href="c2c-skills.html"><i class="fas fa-users-cog"></i> Campus to Corporate (C2C)</a></li>
+            <li class="dropdown-item"><a href="industrial-training.html"><i class="fas fa-cogs"></i> Industrial Oriented Training</a></li>
+          </ul>
+        </li>
+        <li><a href="events.html" class="nav-link">Upcoming Events</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="tel:+917078437914" class="btn btn-sm btn-outline"><i class="fas fa-phone-alt"></i> <span>7078437914</span></a>
+        <a href="book-demo.html" class="btn btn-sm btn-primary"><span>Book Demo</span></a>
+        <button id="mobile-toggle" class="mobile-toggle"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="pill-badge emerald"><i class="fas fa-cogs"></i> FLAGSHIP PROGRAM 03</span>
+      <h1 class="page-hero-title">Industrial Oriented <span class="shimmer-text">Technical Skills</span></h1>
+      <p class="page-hero-desc">
+        Practical shop-floor manufacturing, PLC/SCADA industrial automation, and robotics motion control designed for engineers and plant operations professionals.
+      </p>
+    </div>
+  </section>
+
+  <!-- 3 Pillars of Industrial Training -->
+  <section style="padding: 5.5rem 0; background: var(--beige-cream);">
+    <div class="container">
+      <div class="tech-cards-grid">
+        <!-- 1. Operational Excellence -->
+        <div class="tech-card interactive-card reveal delay-100" style="background:#FFFFFF; border:1px solid var(--beige-sand); border-top:4px solid var(--gold-dark); border-radius:var(--radius-md); padding:2.5rem 2rem; box-shadow:var(--shadow-luxury);">
+          <div>
+            <div class="tech-icon-circle gold">
+              <i class="fas fa-medal"></i>
+            </div>
+            <h3 class="tech-card-title">Operational Excellence</h3>
+            <p style="color: var(--text-body-dark); margin-bottom: 1.5rem; font-size:0.92rem; line-height:1.6;">World-class lean frameworks, waste elimination, and root-cause failure analysis for manufacturing plants.</p>
+
+            <ul class="tech-topics-list">
+              <li><i class="fas fa-check-circle" style="color: var(--gold-dark);"></i> <span><strong>Lean Manufacturing & 5S:</strong> Shop floor optimization</span></li>
+              <li><i class="fas fa-check-circle" style="color: var(--gold-dark);"></i> <span><strong>Quality & TQM:</strong> Zero defect culture & statistical control</span></li>
+              <li><i class="fas fa-check-circle" style="color: var(--gold-dark);"></i> <span><strong>TPM (Total Productive Maint.):</strong> OEE metric maximization</span></li>
+              <li><i class="fas fa-check-circle" style="color: var(--gold-dark);"></i> <span><strong>RCA (Root Cause Analysis):</strong> 5-Why & Fishbone diagrams</span></li>
+              <li><i class="fas fa-check-circle" style="color: var(--gold-dark);"></i> <span><strong>8D Problem Solving:</strong> Global automotive quality reporting</span></li>
+            </ul>
+          </div>
+          <a href="book-demo.html" class="btn btn-primary" style="width: 100%; margin-top: 1.5rem; text-align:center;">Enroll in Lean & 8D</a>
+        </div>
+
+        <!-- 2. Industrial Automation -->
+        <div class="tech-card interactive-card reveal delay-200" style="background:#FFFFFF; border:1px solid var(--beige-sand); border-top:4px solid var(--navy-deep); border-radius:var(--radius-md); padding:2.5rem 2rem; box-shadow:var(--shadow-luxury);">
+          <div>
+            <div class="tech-icon-circle gold">
+              <i class="fas fa-sliders-h"></i>
+            </div>
+            <h3 class="tech-card-title">Industrial Automation</h3>
+            <p style="color: var(--text-body-dark); margin-bottom: 1.5rem; font-size:0.92rem; line-height:1.6;">Comprehensive hardware programming, sensor telemetry, and supervisory control systems.</p>
+
+            <ul class="tech-topics-list">
+              <li><i class="fas fa-check-circle" style="color: var(--gold-dark);"></i> <span><strong>PLC Programming:</strong> Ladder logic, Siemens TIA Portal & Allen Bradley</span></li>
+              <li><i class="fas fa-check-circle" style="color: var(--gold-dark);"></i> <span><strong>HMI & SCADA:</strong> Graphical telemetry & alarm management</span></li>
+              <li><i class="fas fa-check-circle" style="color: var(--gold-dark);"></i> <span><strong>Sensors & Transmitters:</strong> Proximity, optical, pressure & temp</span></li>
+              <li><i class="fas fa-check-circle" style="color: var(--gold-dark);"></i> <span><strong>Hydraulics & Pneumatics:</strong> Electro-pneumatic circuit design</span></li>
+              <li><i class="fas fa-check-circle" style="color: var(--gold-dark);"></i> <span><strong>PID Closed-Loop:</strong> Feedback control tuning in live simulations</span></li>
+            </ul>
+          </div>
+          <a href="book-demo.html" class="btn btn-primary" style="width: 100%; margin-top: 1.5rem; text-align:center;">Enroll in Automation</a>
+        </div>
+
+        <!-- 3. Industrial Robotics -->
+        <div class="tech-card interactive-card reveal delay-300" style="background:#FFFFFF; border:1px solid var(--beige-sand); border-top:4px solid var(--gold-dark); border-radius:var(--radius-md); padding:2.5rem 2rem; box-shadow:var(--shadow-luxury);">
+          <div>
+            <div class="tech-icon-circle gold">
+              <i class="fas fa-robot"></i>
+            </div>
+            <h3 class="tech-card-title">Industrial Robotics</h3>
+            <p style="color: var(--text-body-dark); margin-bottom: 1.5rem; font-size:0.92rem; line-height:1.6;">Precision multi-axis kinematics, servo tuning, frequency drives, and Industry 4.0 robotics cells.</p>
+
+            <ul class="tech-topics-list">
+              <li><i class="fas fa-check-circle" style="color: var(--gold-dark);"></i> <span><strong>Multi-Axis Motion:</strong> Coordinate interpolation & trajectory planning</span></li>
+              <li><i class="fas fa-check-circle" style="color: var(--gold-dark);"></i> <span><strong>Servo Motors & Drives:</strong> Torque, velocity & position calibration</span></li>
+              <li><i class="fas fa-check-circle" style="color: var(--gold-dark);"></i> <span><strong>VFD (Variable Frequency Drives):</strong> AC motor speed modulation</span></li>
+              <li><i class="fas fa-check-circle" style="color: var(--gold-dark);"></i> <span><strong>Articulated Robots:</strong> Pick & place, welding & assembly setups</span></li>
+              <li><i class="fas fa-check-circle" style="color: var(--gold-dark);"></i> <span><strong>Industry 4.0:</strong> IoT cloud gateway communication & analytics</span></li>
+            </ul>
+          </div>
+          <a href="book-demo.html" class="btn btn-primary" style="width: 100%; margin-top: 1.5rem; text-align:center;">Enroll in Robotics</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section style="padding: 4rem 0; text-align:center;">
+    <div class="container">
+      <div style="background:var(--navy-deep); border:1px solid var(--border-gold-subtle); border-radius:var(--radius-xl); padding:3.5rem; max-width:800px; margin:0 auto; box-shadow:var(--shadow-navy-card);" class="reveal">
+        <h2 style="font-size:2.2rem; color:#fff; margin-bottom:1rem;">Upgrade Your Plant & Engineering Skills</h2>
+        <p style="color:var(--beige-sand); margin-bottom:2rem;">Join live hardware labs and case study simulations guided by seasoned automation professionals.</p>
+        <a href="book-demo.html" class="btn btn-primary btn-lg">Book Free Technical Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>© 2026 <strong>NexGen C2C Skills</strong>. All Rights Reserved. Building Future-Ready Talent.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="index.html">Home</a>
+          <a href="industrial-training.html">Technical Training</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/store.js"></script>
+  <script src="assets/js/canvas-bg.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

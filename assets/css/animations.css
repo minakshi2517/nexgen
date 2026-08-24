@@ -1,0 +1,58 @@
+/* ==========================================================================
+   NexGen C2C Skills - Subtle, High-End SaaS Micro-Animations
+   ========================================================================== */
+
+@keyframes floatHero {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes marqueeSlide {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Utilities */
+.float-anim {
+  animation: floatHero 5s ease-in-out infinite;
+}
+
+.reveal {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.reveal-left {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.reveal-right {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.delay-100 { transition-delay: 60ms; }
+.delay-200 { transition-delay: 120ms; }
+.delay-300 { transition-delay: 180ms; }
+.delay-400 { transition-delay: 240ms; }
+.delay-500 { transition-delay: 300ms; }
+
+.interactive-card {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.interactive-card:hover {
+  transform: translateY(-4px);
+}
