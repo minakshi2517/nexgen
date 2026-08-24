@@ -2,7 +2,6 @@
   "name": "nexgen-c2c-skills",
   "version": "1.0.0",
   "description": "NexGen C2C Skills - AI, Industrial & Corporate Training Platform",
-  "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js"
